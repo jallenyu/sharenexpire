@@ -1,0 +1,27 @@
+# ---- Python (server/) ----
+server/__pycache__/
+server/*.pyc
+server/*.pyo
+server/*.pyd
+server/*.log
+server/venv/
+server/.env
+
+# ---- Node / React (client/) ----
+client/node_modules/
+client/.env
+client/dist/
+client/build/
+client/.parcel-cache/
+client/.next/
+client/.turbo/
+
+# ---- Common ----
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# ---- Docker ----
+*.pid
+*.pid.lock
