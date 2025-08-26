@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Expose the port Flask will run on
-EXPOSE 5000
+EXPOSE 80
 
 # Use Gunicorn for production-grade server
 # 4 worker processes, bind to all interfaces
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:80", "app:app"]
