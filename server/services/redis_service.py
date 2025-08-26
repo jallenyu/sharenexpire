@@ -13,4 +13,4 @@ def get_file_metadata(redis_client, short_id):
     Retrieve file URL from Redis by short_id.
     """
     value = redis_client.get(short_id)
-    return value.decode("utf-8") if value else None
+    return value if value else None
