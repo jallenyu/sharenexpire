@@ -18,6 +18,7 @@ export default function SuccessScreen({ url, onReset }: SuccessScreenProps) {
                     </Input>
                 )}
             </CopyButton>
+            <Space h="md" />
             <Button variant="filled" onClick={onReset}>Share another</Button>
         </div>
     );
