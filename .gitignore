@@ -29,3 +29,4 @@ client/.turbo/
 # ---- Deployment ---
 *.zip
 *.json
+.platform/
