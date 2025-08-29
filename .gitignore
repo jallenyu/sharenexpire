@@ -25,3 +25,7 @@ client/.turbo/
 # ---- Docker ----
 *.pid
 *.pid.lock
+
+# ---- Deployment ---
+*.zip
+*.json
