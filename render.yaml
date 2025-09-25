@@ -13,6 +13,7 @@ services:
         fromService:
           name: sharenexpire-redis
           type: redis
+          property: connectionString
       - key: FRONTEND_URL
         value: https://sharenexpire.com
       - key: S3_BUCKET_NAME
