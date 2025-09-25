@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: sharenexpire-api
+    env: docker
+    dockerfilePath: ./server/Dockerfile
+    plan: free
+    autoDeploy: true
+    branch: main
+    domains:
+      - api.sharenexpire.com
+    envVars:
+      - key: REDIS_URL
+        fromService:
+          name: sharenexpire-redis
+          type: redis
+      - key: FRONTEND_URL
+        value: https://sharenexpire.com
+      - key: S3_BUCKET_NAME
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        sync: false
+
+  - type: redis
+    name: sharenexpire-redis
+    plan: free
+    ipAllowList: []
