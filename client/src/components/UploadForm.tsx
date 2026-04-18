@@ -33,10 +33,10 @@ export default function UploadForm({ onSuccess, onError, setFileUrl }: UploadFor
     });
 
     const handleShare = async (values: typeof form.values) => {
-        if (values.file!.size > 200 * 1024 * 1024) {
-            form.setFieldError("file", "File size limit is 200MB");
-            return;
-        }
+        // if (values.file!.size > 200 * 1024 * 1024) {
+        //     form.setFieldError("file", "File size limit is 200MB");
+        //     return;
+        // }
 
         setLoading(true);
         try {
